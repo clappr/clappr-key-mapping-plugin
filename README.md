@@ -1,23 +1,13 @@
-[![](https://data.jsdelivr.com/v1/package/npm/@clappr/clappr-key-mapping-plugin/badge)](https://www.jsdelivr.com/package/npm/@clappr/clappr-key-mapping-plugin)
+<!-- [![](https://data.jsdelivr.com/v1/package/npm/@clappr/clappr-key-mapping-plugin/badge)](https://www.jsdelivr.com/package/npm/@clappr/clappr-key-mapping-plugin)
 [![](https://img.shields.io/npm/v/@clappr/clappr-key-mapping-plugin.svg?style=flat-square)](https://npmjs.org/package/@clappr/clappr-key-mapping-plugin)
 [![](https://img.shields.io/npm/dt/@clappr/clappr-key-mapping-plugin.svg?style=flat-square)](https://npmjs.org/package/@clappr/clappr-key-mapping-plugin)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/@clappr/clappr-key-mapping-plugin?style=flat-square)](https://bundlephobia.com/result?p=@clappr/clappr-key-mapping-plugin)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 ![Travis (.com)](https://img.shields.io/travis/com/joaopaulovieira/clappr-key-mapping-plugin?style=flat-square)
 ![Coveralls github](https://img.shields.io/coveralls/github/joaopaulovieira/clappr-key-mapping-plugin?style=flat-square)
-[![](https://img.shields.io/github/license/joaopaulovieira/clappr-context-menu-plugin?style=flat-square)](https://github.com/joaopaulovieira/clappr-context-menu-plugin/blob/master/LICENSE)
+[![](https://img.shields.io/github/license/joaopaulovieira/clappr-context-menu-plugin?style=flat-square)](https://github.com/joaopaulovieira/clappr-context-menu-plugin/blob/master/LICENSE) -->
 
-<h1 align=center>Clappr TVs key mapping plugin</h1>
-
-## Table of Contents
-- [Features](https://github.com/clappr/clappr-key-mapping-plugin#Features)
-- [Usage](https://github.com/clappr/clappr-key-mapping-plugin#Usage)
-- [Configuration](https://github.com/clappr/clappr-key-mapping-plugin#Configuration)
-- [Development](https://github.com/clappr/clappr-key-mapping-plugin#Development)
-
-## Features
-### :mage: One plugin to rule them all (remote controls)
-Most smart TV platforms implement their own key code for their remote controls. With this plugin, you can guarantee that the wanted action for one button is consistent through all mapped devices.
+<h1 align=center>Clappr key mapping plugin</h1>
 
 ## Usage
 You can use it from JSDelivr:
