@@ -1,5 +1,5 @@
 import { Core, Container, Browser, Playback, version } from '@clappr/core'
-import TVsKeyMappingPlugin from './tv_keymapping_plugin'
+import KeyMappingPlugin from './keymapping_plugin'
 import { KeyMap } from './keys_mapping/map'
 
 const setupTest = (options = {}) => {
@@ -7,7 +7,7 @@ const setupTest = (options = {}) => {
   options.playback = playback
   const container = new Container(options)
   const core = new Core(options)
-  const plugin = new TVsKeyMappingPlugin(core)
+  const plugin = new KeyMappingPlugin(core)
 
   core.addPlugin(plugin)
   core.activeContainer = container
@@ -15,7 +15,7 @@ const setupTest = (options = {}) => {
   return { plugin, core, container, playback }
 }
 
-describe('TVsKeyMappingPlugin', () => {
+describe('KeyMappingPlugin', () => {
   test('is compatible with the latest Clappr core version', () => {
     const { plugin, core } = setupTest()
 
@@ -23,7 +23,7 @@ describe('TVsKeyMappingPlugin', () => {
   })
 
   test('map keys correctly on device Samsung Tizen', () => {
-    setupTest({ tvsKeyMapping: { deviceToMap: 'samsung_tizen' } })
+    setupTest({ keyMapping: { deviceToMap: 'samsung_tizen' } })
 
     expect(Browser.Keys).not.toBeUndefined()
     expect(Browser.Keys.VK_UP).toBe(38)
@@ -41,7 +41,7 @@ describe('TVsKeyMappingPlugin', () => {
   })
 
   test('map keys correctly on device Samsung Orsay', () => {
-    setupTest({ tvsKeyMapping: { deviceToMap: 'samsung_orsay' } })
+    setupTest({ keyMapping: { deviceToMap: 'samsung_orsay' } })
 
     expect(Browser.Keys).not.toBeUndefined()
     expect(Browser.Keys.VK_UP).toBe(29460)
@@ -59,7 +59,7 @@ describe('TVsKeyMappingPlugin', () => {
   })
 
   test('map keys correctly on device LG WebOS', () => {
-    setupTest({ tvsKeyMapping: { deviceToMap: 'lg_webos' } })
+    setupTest({ keyMapping: { deviceToMap: 'lg_webos' } })
 
     expect(Browser.Keys).not.toBeUndefined()
     expect(Browser.Keys.VK_UP).toBe(38)
@@ -77,7 +77,7 @@ describe('TVsKeyMappingPlugin', () => {
   })
 
   test('map keys correctly on device Panasonic', () => {
-    setupTest({ tvsKeyMapping: { deviceToMap: 'panasonic' } })
+    setupTest({ keyMapping: { deviceToMap: 'panasonic' } })
 
     expect(Browser.Keys).not.toBeUndefined()
     expect(Browser.Keys.VK_UP).toBe(38)
@@ -95,7 +95,7 @@ describe('TVsKeyMappingPlugin', () => {
   })
 
   test('map keys correctly on device Browser', () => {
-    setupTest({ tvsKeyMapping: { deviceToMap: 'browser' } })
+    setupTest({ keyMapping: { deviceToMap: 'browser' } })
 
     expect(Browser.Keys).not.toBeUndefined()
     expect(Browser.Keys.VK_UP).toBe(38)
@@ -113,13 +113,13 @@ describe('TVsKeyMappingPlugin', () => {
   })
 
   test('default to browser key mapping when no device is provided', () => {
-    setupTest({ tvsKeyMapping: { deviceToMap: null } })
+    setupTest({ keyMapping: { deviceToMap: null } })
 
     expect(Browser.Keys).toBe(KeyMap.browser)
   })
 
   test('does not define `Browser.Keys` if device is unknown', () => {
-    setupTest({ tvsKeyMapping: { deviceToMap: 'unknown device' } })
+    setupTest({ keyMapping: { deviceToMap: 'unknown device' } })
 
     expect(Browser.Keys).toBeUndefined()
   })

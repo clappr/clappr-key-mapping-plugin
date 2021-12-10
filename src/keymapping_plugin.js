@@ -1,8 +1,8 @@
 import { Browser, CorePlugin, Log, version } from '@clappr/core'
 import { KeyMap } from './keys_mapping/map'
 
-export default class TVsKeyMappingPlugin extends CorePlugin {
-  get name() { return 'tvs_key_mapping' }
+export default class KeyMappingPlugin extends CorePlugin {
+  get name() { return 'key_mapping' }
 
   get supportedVersion() { return { min: version } }
 
@@ -14,9 +14,9 @@ export default class TVsKeyMappingPlugin extends CorePlugin {
   setup() {
     delete Browser.Keys
 
-    let deviceName = this.options.tvsKeyMapping?.deviceToMap
+    let deviceName = this.options.keyMapping?.deviceToMap
     if (!deviceName) {
-      Log.warn(this.name, 'Device not present in "tvsKeyMapping.deviceToMap" option. Defaulting to "browser".')
+      Log.warn(this.name, 'Device not present in "keyMapping.deviceToMap" option. Defaulting to "browser".')
       deviceName = 'browser'
     }
 

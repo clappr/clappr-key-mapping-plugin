@@ -23,12 +23,12 @@ yarn add @clappr/clappr-key-mapping-plugin
 npm i @clappr/clappr-key-mapping-plugin
 ```
 
-Then just add the `TVsKeyMappingPlugin` into the list of plugins of your player instance and set the device name on [tvsKeyMapping.deviceToMap](https://github.com/clappr/clappr-key-mapping-plugin#devicetomap-string) config:
+Then just add the `KeyMappingPlugin` into the list of plugins of your player instance and set the device name on [keyMapping.deviceToMap](https://github.com/clappr/clappr-key-mapping-plugin#devicetomap-string) config:
 ```javascript
 var player = new Clappr.Player({
   source: 'http://your.video/here.mp4',
-  plugins: [TVsKeyMappingPlugin],
-  tvsKeyMapping: { deviceToMap: 'browser' },
+  plugins: [KeyMappingPlugin],
+  keyMapping: { deviceToMap: 'browser' },
 });
 
 
@@ -54,12 +54,12 @@ onKeyDown(event) {
 ```
 
 ## Configuration
-The options for the plugin go in the `tvsKeyMapping` property as shown below:
+The options for the plugin go in the `keyMapping` property as shown below:
 ```javascript
 var player = new Clappr.Player({
   source: 'http://your.video/here.mp4',
-  plugins: [TVsKeyMappingPlugin],
-  tvsKeyMapping: {
+  plugins: [KeyMappingPlugin],
+  keyMapping: {
     deviceToMap: 'browser',
   },
 });

@@ -29,9 +29,9 @@ var player = new Clappr.Player({
   source: searchParams && searchParams.get('source') || 'http://clappr.io/highline.mp4',
   height: searchParams && searchParams.get('height') || '320px',
   width: searchParams && searchParams.get('width') || '640px',
-  tvsKeyMapping: { deviceToMap: searchParams && searchParams.get('deviceToMap') || 'browser' },
+  keyMapping: { deviceToMap: searchParams && searchParams.get('deviceToMap') || 'browser' },
   playback: { controls: true },
-  plugins: [window.TVsKeyMappingPlugin],
+  plugins: [window.KeyMappingPlugin],
   events: { onReady: onReadyCallback },
 });
 

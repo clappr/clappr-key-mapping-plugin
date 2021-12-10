@@ -25,17 +25,17 @@ const plugins = [
 ]
 
 const mainBundle = {
-  input: 'src/tv_keymapping_plugin.js',
+  input: 'src/keymapping_plugin.js',
   external: ['@clappr/core'],
   output: [
     {
-      name: 'TVsKeyMappingPlugin',
+      name: 'KeyMappingPlugin',
       file: pkg.main,
       format: 'umd',
       globals: { '@clappr/core': 'Clappr' },
     },
     minimize && {
-      name: 'TVsKeyMappingPlugin',
+      name: 'KeyMappingPlugin',
       file: 'dist/clappr-key-mapping-plugin.min.js',
       format: 'umd',
       globals: { '@clappr/core': 'Clappr' },
@@ -46,10 +46,10 @@ const mainBundle = {
 }
 
 const esmBundle = {
-  input: 'src/tv_keymapping_plugin.js',
+  input: 'src/keymapping_plugin.js',
   external: ['@clappr/core', /@babel\/runtime/],
   output: {
-    name: 'TVsKeyMappingPlugin',
+    name: 'KeyMappingPlugin',
     file: pkg.module,
     format: 'esm',
     globals: { '@clappr/core': 'Clappr' },
